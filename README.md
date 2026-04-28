@@ -90,18 +90,26 @@ Cliente Java pro **DICT do BCB** (diretório de chaves Pix). **mTLS via SslBundl
 <tr>
 <td valign="top">
 
-### 🔜 pix-nfc-reference
-<sub>Em breve</sub>
+### ✅ [pix-nfc-reference](https://github.com/Paulo-Marcos-Lucio/pix-nfc-reference)
+<sub>Live · v0.1.0 · 2026-04-26</sub>
 
-**Pix por aproximação (NFC)** — spec recém-publicada pelo BCB. Reference do fluxo end-to-end, app demo Android opcional, integração com wallets via HCE.
+**Pix por Aproximação (NFC)** — spec recém-publicada pelo BCB. HMAC-SHA256 constant-time, cross-check via DICT, dual simulator (DICT+SPI), Resilience4j tipado, 5 ADRs.
+
+<a href="https://github.com/Paulo-Marcos-Lucio/pix-nfc-reference">
+  <img src="https://img.shields.io/badge/-Ver%20repo-238636?style=flat-square&logo=github&logoColor=white" />
+</a>
 
 </td>
 <td valign="top">
 
-### 🔜 open-finance-payments-reference
-<sub>Em breve</sub>
+### ✅ [open-finance-payments-reference](https://github.com/Paulo-Marcos-Lucio/open-finance-payments-reference)
+<sub>Live · v0.1.0 · 2026-04-28</sub>
 
-**Iniciação de Pagamentos** do Open Finance Brasil (Fase 4). FAPI 2.0 + Brasil profile, JWS/JWE encadeados, conformance suite, integração com Diretório Central simulado.
+**Iniciador de Pagamento (PISP)** do Open Finance Brasil — Fase 4. Consent flow + Payment Initiation com state machines ISO 20022, simulator do banco detentor in-process, IT end-to-end. FAPI Advanced + DPoP + DCR no roadmap v0.2.0.
+
+<a href="https://github.com/Paulo-Marcos-Lucio/open-finance-payments-reference">
+  <img src="https://img.shields.io/badge/-Ver%20repo-238636?style=flat-square&logo=github&logoColor=white" />
+</a>
 
 </td>
 </tr>
