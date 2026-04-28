@@ -116,10 +116,14 @@ Cliente Java pro **DICT do BCB** (diretório de chaves Pix). **mTLS via SslBundl
 <tr>
 <td valign="top">
 
-### 🔜 open-insurance-transmissor-reference
-<sub>Em breve</sub>
+### ✅ [open-insurance-transmissor-reference](https://github.com/Paulo-Marcos-Lucio/open-insurance-transmissor-reference)
+<sub>Live · v0.1.0 · 2026-04-28</sub>
 
-**OPIN — Open Insurance Brasil**. Padrão Susep (FAPI-CIBA), modelagem de produtos, transmissor de dados de seguros, dashboard de consents.
+**OPIN — Open Insurance Brasil — Phase 2 (Insurance Policies)**. Transmissor de Dados conforme padrão Susep, records imutáveis, seed loader populando 50 apólices fake, pagination padrão (`data` + `meta` + `links`). FAPI-CIBA + DCR no roadmap v0.2.0.
+
+<a href="https://github.com/Paulo-Marcos-Lucio/open-insurance-transmissor-reference">
+  <img src="https://img.shields.io/badge/-Ver%20repo-238636?style=flat-square&logo=github&logoColor=white" />
+</a>
 
 </td>
 <td valign="top">
