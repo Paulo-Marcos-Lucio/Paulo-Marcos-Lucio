@@ -58,7 +58,7 @@ Construo aqui no GitHub uma **suíte pública de implementações de referência
 
 ## 🇧🇷 Suíte de Referência Regulatória BR
 
-Implementações *production-grade* dos contratos regulatórios mais críticos do mercado financeiro brasileiro. Cada repo é open source (MIT) e roda end-to-end na sua máquina em < 2 minutos.
+Implementações *production-grade* dos contratos regulatórios mais críticos do mercado financeiro brasileiro. Cada repo é open source (MIT) e roda end-to-end na sua máquina em < 2 minutos. **Suíte v1 fechada: 6 repos públicos** — os 5 de implementação abaixo + o material didático [`regulatorio-bcb-fundamentos-public`](https://github.com/Paulo-Marcos-Lucio/regulatorio-bcb-fundamentos-public). Visão geral em [paulo-marcos-lucio.github.io](https://paulo-marcos-lucio.github.io).
 
 <table>
 <tr>
@@ -103,9 +103,9 @@ Cliente Java pro **DICT do BCB** (diretório de chaves Pix). **mTLS via SslBundl
 <td valign="top">
 
 ### ✅ [open-finance-payments-reference](https://github.com/Paulo-Marcos-Lucio/open-finance-payments-reference)
-<sub>Live · v0.1.0 · 2026-04-28</sub>
+<sub>Live · v0.2.0 · 2026-04-28</sub>
 
-**Iniciador de Pagamento (PISP)** do Open Finance Brasil — Fase 4. Consent flow + Payment Initiation com state machines ISO 20022, simulator do banco detentor in-process, IT end-to-end. FAPI Advanced + DPoP + DCR no roadmap v0.2.0.
+**Iniciador de Pagamento (PISP)** do Open Finance Brasil — Fase 4. Consent flow + Payment Initiation com state machines ISO 20022, simulator do banco detentor in-process, IT end-to-end. **DPoP RFC 9449** (sender-constrained tokens) já shippado na v0.2.0.
 
 <a href="https://github.com/Paulo-Marcos-Lucio/open-finance-payments-reference">
   <img src="https://img.shields.io/badge/-Ver%20repo-238636?style=flat-square&logo=github&logoColor=white" />
