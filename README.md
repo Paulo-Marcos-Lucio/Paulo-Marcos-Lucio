@@ -14,7 +14,7 @@
      ════════════════════════════════════════════════════════════════════════ -->
 
 <a href="https://paulo-marcos-lucio.github.io">
-  <img src="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/hero-command.svg" alt="Paulo Marcos Lucio — Segurança de Aplicações Web (AppSec): radar de vigilância com telemetria da suíte" width="100%"/>
+  <img src="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/hero-abismo.svg" alt="Paulo Marcos Lucio — Segurança de Aplicações Web (AppSec): diagnóstico e correção de vulnerabilidades web. Olho de vigília com radar no abismo bioluminescente." width="100%"/>
 </a>
 
 <div align="center">

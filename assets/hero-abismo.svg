@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 440" role="img" aria-label="Paulo Marcos Lucio — Segurança de Aplicações Web (AppSec): diagnóstico e correção de vulnerabilidades web. Olho de vigília com radar no abismo bioluminescente.">
+  <defs>
+    <radialGradient id="h-bg" cx="0.72" cy="0.42" r="0.9"><stop offset="0" stop-color="#05192b"/><stop offset="0.6" stop-color="#02101c"/><stop offset="1" stop-color="#01060c"/></radialGradient>
+    <radialGradient id="h-glow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#35d6ff" stop-opacity=".55"/><stop offset="1" stop-color="#35d6ff" stop-opacity="0"/></radialGradient>
+    <linearGradient id="h-bar" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22e0a3"/><stop offset=".5" stop-color="#35d6ff"/><stop offset="1" stop-color="#9a7cff"/></linearGradient>
+  </defs>
+  <rect width="1280" height="440" fill="url(#h-bg)"/>
+
+  <!-- binary rain (metade direita) -->
+  <g font-family="ui-monospace,Menlo,Consolas,monospace" font-size="13" fill="#35d6ff">
+    <text x="760" opacity=".14">1<tspan x="760" dy="18">0</tspan><tspan x="760" dy="18">1</tspan><tspan x="760" dy="18">1</tspan><tspan x="760" dy="18">0</tspan><animateTransform attributeName="transform" type="translate" values="0,-90;0,470" dur="8s" begin="-2s" repeatCount="indefinite"/></text>
+    <text x="900" opacity=".10">0<tspan x="900" dy="18">1</tspan><tspan x="900" dy="18">0</tspan><animateTransform attributeName="transform" type="translate" values="0,-60;0,470" dur="10s" begin="-4s" repeatCount="indefinite"/></text>
+    <text x="1180" opacity=".12">10<tspan x="1180" dy="18">1</tspan><tspan x="1180" dy="18">0</tspan><animateTransform attributeName="transform" type="translate" values="0,-120;0,470" dur="7s" repeatCount="indefinite"/></text>
+    <text x="1240" opacity=".09">0<tspan x="1240" dy="18">1</tspan><tspan x="1240" dy="18">1</tspan><animateTransform attributeName="transform" type="translate" values="0,-40;0,470" dur="9s" begin="-3s" repeatCount="indefinite"/></text>
+  </g>
+
+  <!-- barramento de circuito com dados trafegando -->
+  <g fill="none" stroke="#35d6ff" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke-opacity=".13" stroke-width="2"><path d="M80 400 H720 Q740 400 740 380 V330"/><path d="M980 410 V352 Q980 340 992 340 H1120"/><path d="M1210 96 V300"/></g>
+    <g stroke-opacity=".4"><circle cx="80" cy="400" r="6" fill="#35d6ff" fill-opacity=".3"/><rect x="1112" y="332" width="16" height="16" rx="2" fill="#35d6ff" fill-opacity=".22"/><path d="M740 330 v-22 m-6 -9 l6 13 6 -13"/></g>
+    <g stroke="#bdf3ff" stroke-width="2.4" stroke-opacity=".9" stroke-dasharray="9 700">
+      <path d="M80 400 H720 Q740 400 740 380 V330"><animate attributeName="stroke-dashoffset" values="709;0" dur="3.6s" repeatCount="indefinite"/></path>
+      <path d="M980 410 V352 Q980 340 992 340 H1120"><animate attributeName="stroke-dashoffset" values="709;0" dur="4.2s" begin="-1.5s" repeatCount="indefinite"/></path>
+      <path d="M1210 96 V300"><animate attributeName="stroke-dashoffset" values="709;0" dur="3s" begin="-2s" repeatCount="indefinite"/></path>
+    </g>
+    <circle r="3.5" fill="#bdf3ff"><animateMotion path="M80 400 H720 Q740 400 740 380 V330" dur="3.6s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- cantoneiras (centro de comando) -->
+  <g stroke="#35d6ff" stroke-width="2" stroke-opacity=".55" fill="none">
+    <path d="M28 28 h40 M28 28 v40"/><path d="M1252 28 h-40 M1252 28 v40"/>
+    <path d="M28 412 h40 M28 412 v-40"/><path d="M1252 412 h-40 M1252 412 v-40"/>
+  </g>
+  <text x="1212" y="52" text-anchor="end" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="13" letter-spacing="1" fill="#5b83a0">paulo-marcos-lucio.github.io</text>
+
+  <!-- olho de vigília + radar (direita) -->
+  <g transform="translate(1030,222)">
+    <circle r="180" fill="url(#h-glow)"><animate attributeName="opacity" values=".7;1;.7" dur="4s" repeatCount="indefinite"/></circle>
+    <circle r="150" fill="none" stroke="#35d6ff" stroke-opacity=".10"/>
+    <circle r="112" fill="none" stroke="#35d6ff" stroke-opacity=".14"/>
+    <g>
+      <path d="M0 0 L150 0 A150 150 0 0 1 56 139 Z" fill="#35d6ff" fill-opacity=".08"/>
+      <line x1="0" y1="0" x2="150" y2="0" stroke="#6ee7ff" stroke-width="2" stroke-opacity=".5"/>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="7s" repeatCount="indefinite"/>
+    </g>
+    <path d="M-150 0 Q0 -96 150 0 Q0 96 -150 0 Z" fill="#02090f" stroke="#59e2ff" stroke-width="2.5"/>
+    <g>
+      <circle r="58" fill="#021018" stroke="#35d6ff" stroke-width="2" stroke-opacity=".5"/>
+      <circle r="52" fill="none" stroke="#59e2ff" stroke-width="6"><animate attributeName="r" values="44;58;44" dur="4.5s" repeatCount="indefinite"/></circle>
+      <g stroke="#35d6ff" stroke-opacity=".5" stroke-width="1.5"><path d="M0 -48V-26M0 48V26M-48 0H-26M48 0H26M-34 -34l14 14M34 34l-14 -14M-34 34l14 -14M34 -34l-14 14"/></g>
+      <circle r="22" fill="#0a2230" stroke="#7ff0ff" stroke-width="2"/>
+      <circle r="9" fill="#eaffff"><animate attributeName="opacity" values="1;.4;1" dur="2s" repeatCount="indefinite"/></circle>
+      <animateTransform attributeName="transform" type="translate" values="0,0; 20,-8; -16,8; 0,0" dur="9s" repeatCount="indefinite"/>
+    </g>
+    <text x="0" y="140" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12" letter-spacing="3" fill="#4f86a6">V I G Í L I A</text>
+  </g>
+
+  <!-- texto (esquerda) -->
+  <text x="80" y="128" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="16" letter-spacing="6" fill="#5fdcff">SEGURANÇA DE APLICAÇÕES WEB · APPSEC</text>
+  <text x="76" y="220" font-family="Segoe UI,system-ui,sans-serif" font-weight="800" font-size="66" letter-spacing="-1.5" fill="#eafaff">Paulo Marcos Lucio</text>
+  <text x="80" y="262" font-family="Segoe UI,system-ui,sans-serif" font-size="23" fill="#9fd4ea">Diagnóstico e correção de vulnerabilidades web</text>
+  <text x="80" y="312" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="14.5" fill="#7fb4d0">OWASP&#160;Top&#160;10&#160;&#160;·&#160;&#160;TLS/PKI&#160;&#160;·&#160;&#160;Cabeçalhos&#160;&#160;·&#160;&#160;CORS&#160;&#160;·&#160;&#160;DNS&#160;&#160;·&#160;&#160;LGPD&#160;art.&#160;46</text>
+  <text x="80" y="348" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="13.5" fill="#5b7f96">5&#160;ferramentas&#160;&#160;·&#160;&#160;340+&#160;testes&#160;automatizados&#160;&#160;·&#160;&#160;MIT&#160;&#160;·&#160;&#160;CI&#160;✓</text>
+  <rect x="80" y="372" width="150" height="4" rx="2" fill="url(#h-bar)"><animate attributeName="width" values="60;150;60" dur="4s" repeatCount="indefinite"/></rect>
+</svg>
