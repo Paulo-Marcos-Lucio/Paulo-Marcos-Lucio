@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 620" width="940" height="620" role="img" aria-label="Diagnóstico real do Sentinela contra paulo-marcos-lucio.github.io em 21/07/2026: 8 checagens não intrusivas, nenhum achado crítico ou alto, 3 médios, 2 baixos, 4 informativos, nota de higiene 70/100 conceito C — reproduzível com sentinela scan. Versão estática, sem animação.">
+  <title>Sentinela — diagnóstico real de paulo-marcos-lucio.github.io</title>
+  <defs>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2dd4bf" />
+      <stop offset="0.52" stop-color="#38bdf8" />
+      <stop offset="1" stop-color="#818cf8" />
+    </linearGradient>
+    <linearGradient id="meter" gradientUnits="userSpaceOnUse" x1="36" y1="0" x2="596" y2="0">
+      <stop offset="0" stop-color="#2dd4bf" />
+      <stop offset="0.52" stop-color="#38bdf8" />
+      <stop offset="1" stop-color="#818cf8" />
+    </linearGradient>
+    <radialGradient id="glowT" cx="0.12" cy="0.10" r="0.9">
+      <stop offset="0" stop-color="#2dd4bf" stop-opacity="1" />
+      <stop offset="1" stop-color="#2dd4bf" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glowI" cx="0.92" cy="0.96" r="0.9">
+      <stop offset="0" stop-color="#818cf8" stop-opacity="1" />
+      <stop offset="1" stop-color="#818cf8" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="sweep" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2dd4bf" stop-opacity="0" />
+      <stop offset="0.5" stop-color="#2dd4bf" stop-opacity="0.05" />
+      <stop offset="1" stop-color="#2dd4bf" stop-opacity="0" />
+    </linearGradient>
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse">
+      <path d="M34 0 H0 V34" fill="none" stroke="#18212c" stroke-width="1" />
+    </pattern>
+    <clipPath id="panel"><rect x="1" y="1" width="938" height="618" rx="14" /></clipPath>
+    <clipPath id="body"><rect x="1" y="45" width="938" height="566" /></clipPath>
+    <clipPath id="barclip"><rect x="1" y="613" width="938" height="6" /></clipPath>
+    <clipPath id="cmdclip">
+      <rect x="30" y="68" width="880" height="26">
+        </rect>
+    </clipPath>
+  </defs>
+
+  
+  <rect x="1" y="1" width="938" height="618" rx="14" fill="#0b0f14" />
+  <rect x="1" y="1" width="938" height="618" fill="url(#glowT)" clip-path="url(#panel)" opacity="0.15">
+    </rect>
+  <rect x="1" y="1" width="938" height="618" fill="url(#glowI)" clip-path="url(#panel)" opacity="0.15">
+    </rect>
+  <rect x="1" y="45" width="938" height="566" fill="url(#grid)" opacity="0.4" clip-path="url(#panel)" />
+
+  
+  <g clip-path="url(#body)">
+    <rect x="1" y="270" width="938" height="80" fill="url(#sweep)">
+      </rect>
+  </g>
+
+  
+  <path d="M1 15 A14 14 0 0 1 15 1 H925 A14 14 0 0 1 939 15 V44 H1 Z" fill="#0f141b" />
+  <line x1="1" y1="44" x2="939" y2="44" stroke="#212a34" />
+  <circle cx="26" cy="22.5" r="6" fill="#f87171" />
+  <circle cx="46" cy="22.5" r="6" fill="#f59e0b" />
+  <circle cx="66" cy="22.5" r="6" fill="#2dd4bf" />
+  <text x="470" y="27" text-anchor="middle" font-family="'JetBrains Mono','Cascadia Code',ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#67727e">sentinela v0.1.0 — diagnóstico não intrusivo · alvo: paulo-marcos-lucio.github.io</text>
+
+  
+  <g fill="none" stroke="#2dd4bf" stroke-width="1.5" opacity="0.35">
+    <path d="M20 72 V60 H32" />
+    <path d="M920 72 V60 H908" />
+    <path d="M20 588 V600 H32" />
+    <path d="M920 588 V600 H908" />
+  </g>
+
+  <g font-family="'JetBrains Mono','Cascadia Code',ui-monospace,'SF Mono',Menlo,Consolas,monospace">
+
+    
+    <text x="36" y="86" font-size="16" clip-path="url(#cmdclip)"><tspan fill="#2dd4bf">paulo@appsec</tspan><tspan fill="#67727e">:</tspan><tspan fill="#38bdf8">~</tspan><tspan fill="#67727e">$</tspan><tspan fill="#e6edf3"> sentinela scan paulo-marcos-lucio.github.io -f markdown</tspan></text>
+
+    <g opacity="1" transform="translate(0,0)">
+      <text x="36" y="118" font-size="13" fill="#67727e">8 checagens executadas · modo não intrusivo · sob autorização e escopo definido</text>
+      </g>
+
+    
+    <g opacity="1" transform="translate(0,0)">
+      <text x="36" y="156" font-size="15" fill="#8b96a3">TLS válido · HSTS ativo (max-age=31556952)</text>
+      <rect x="612" y="141" width="84" height="21" rx="5" fill="#2dd4bf" fill-opacity="0.12" stroke="#2dd4bf" stroke-opacity="0.7" />
+      <text x="654" y="156" text-anchor="middle" font-size="12" font-weight="700" letter-spacing="1" fill="#2dd4bf">OK</text>
+      </g>
+    <g opacity="1" transform="translate(0,0)">
+      <text x="36" y="186" font-size="15" fill="#8b96a3">Content-Security-Policy ausente</text>
+      <rect x="612" y="171" width="84" height="21" rx="5" fill="#f59e0b" fill-opacity="0.12" stroke="#f59e0b" stroke-opacity="0.7" />
+      <text x="654" y="186" text-anchor="middle" font-size="12" font-weight="700" letter-spacing="1" fill="#f59e0b">MÉDIO</text>
+      <text x="716" y="186" font-size="12" fill="#4b5663">OWASP A02</text>
+      </g>
+    <g opacity="1" transform="translate(0,0)">
+      <text x="36" y="216" font-size="15" fill="#8b96a3">Sem proteção contra clickjacking</text>
+      <rect x="612" y="201" width="84" height="21" rx="5" fill="#f59e0b" fill-opacity="0.12" stroke="#f59e0b" stroke-opacity="0.7" />
+      <text x="654" y="216" text-anchor="middle" font-size="12" font-weight="700" letter-spacing="1" fill="#f59e0b">MÉDIO</text>
+      <text x="716" y="216" font-size="12" fill="#4b5663">OWASP A02</text>
+      </g>
+    <g opacity="1" transform="translate(0,0)">
+      <text x="36" y="246" font-size="15" fill="#8b96a3">Registro DMARC ausente</text>
+      <rect x="612" y="231" width="84" height="21" rx="5" fill="#f59e0b" fill-opacity="0.12" stroke="#f59e0b" stroke-opacity="0.7" />
+      <text x="654" y="246" text-anchor="middle" font-size="12" font-weight="700" letter-spacing="1" fill="#f59e0b">MÉDIO</text>
+      <text x="716" y="246" font-size="12" fill="#4b5663">OWASP A07</text>
+      </g>
+    <g opacity="1" transform="translate(0,0)">
+      <text x="36" y="276" font-size="15" fill="#8b96a3">Referrer-Policy ausente</text>
+      <rect x="612" y="261" width="84" height="21" rx="5" fill="#38bdf8" fill-opacity="0.12" stroke="#38bdf8" stroke-opacity="0.7" />
+      <text x="654" y="276" text-anchor="middle" font-size="12" font-weight="700" letter-spacing="1" fill="#38bdf8">BAIXO</text>
+      <text x="716" y="276" font-size="12" fill="#4b5663">OWASP A02</text>
+      </g>
+    <g opacity="1" transform="translate(0,0)">
+      <text x="36" y="306" font-size="15" fill="#8b96a3">X-Content-Type-Options ausente</text>
+      <rect x="612" y="291" width="84" height="21" rx="5" fill="#38bdf8" fill-opacity="0.12" stroke="#38bdf8" stroke-opacity="0.7" />
+      <text x="654" y="306" text-anchor="middle" font-size="12" font-weight="700" letter-spacing="1" fill="#38bdf8">BAIXO</text>
+      <text x="716" y="306" font-size="12" fill="#4b5663">OWASP A02</text>
+      </g>
+    <g opacity="1" transform="translate(0,0)">
+      <text x="36" y="336" font-size="13" fill="#4b5663">+ 4 informativos: COOP · Permissions-Policy · DNSSEC · HSTS sem includeSubDomains</text>
+      </g>
+
+    <line x1="36" y1="356" x2="904" y2="356" stroke="#18212c" stroke-width="1" stroke-dasharray="868" stroke-dashoffset="0">
+      </line>
+
+    
+    <g opacity="1" transform="translate(0,0)">
+      <text x="36" y="390" font-size="15"><tspan fill="#8b96a3">resumo: </tspan><tspan fill="#2dd4bf">0 críticos</tspan><tspan fill="#4b5663"> · </tspan><tspan fill="#2dd4bf">0 altos</tspan><tspan fill="#4b5663"> · </tspan><tspan fill="#f59e0b">3 médios</tspan><tspan fill="#4b5663"> · </tspan><tspan fill="#38bdf8">2 baixos</tspan><tspan fill="#4b5663"> · </tspan><tspan fill="#8b96a3">4 informativos</tspan></text>
+      </g>
+    <g opacity="1">
+      <text x="36" y="424" font-size="15"><tspan fill="#8b96a3">nota de higiene: </tspan><tspan fill="#e6edf3" font-weight="700">70/100</tspan><tspan fill="#4b5663"> · </tspan><tspan fill="#e6edf3" font-weight="700">conceito C</tspan></text>
+      <rect x="36" y="434" width="560" height="8" rx="4" fill="#18212c" />
+      <rect x="36" y="434" width="392" height="8" rx="4" fill="url(#meter)">
+        </rect>
+      </g>
+    <g opacity="1" transform="translate(0,0)">
+      <text x="36" y="476" font-size="15"><tspan fill="#8b96a3">relatório salvo: </tspan><tspan fill="#38bdf8">exemplo-relatorio.md</tspan><tspan fill="#4b5663"> · </tspan><tspan fill="#8b96a3">plano de ação — comece por aqui</tspan></text>
+      </g>
+
+    
+    <g opacity="1">
+      <text x="36" y="512" font-size="16"><tspan fill="#2dd4bf">paulo@appsec</tspan><tspan fill="#67727e">:</tspan><tspan fill="#38bdf8">~</tspan><tspan fill="#67727e">$</tspan></text>
+      </g>
+    <rect x="192" y="499" width="9" height="15" fill="#2dd4bf" opacity="1">
+      </rect>
+
+    <text x="470" y="582" text-anchor="middle" font-size="12" fill="#4b5663">diagnóstico real de 21/07/2026 · reproduzível: sentinela scan &lt;alvo autorizado&gt;</text>
+  </g>
+
+  
+  <g clip-path="url(#panel)">
+    <rect x="1" y="613" width="938" height="6" fill="url(#brand)" />
+    <g clip-path="url(#barclip)">
+      <rect x="310" y="613" width="320" height="6" fill="#ffffff" opacity="0.5">
+        </rect>
+    </g>
+  </g>
+
+  <rect x="1" y="1" width="938" height="618" rx="14" fill="none" stroke="#212a34" stroke-width="1" />
+</svg>
