@@ -5,6 +5,11 @@
      Regras de manutenção:
        · camo cacheia por URL de forma agressiva: NUNCA editar um asset
          reaproveitando o nome antigo — asset novo = nome de arquivo NOVO.
+       · TEMA CLARO é do VISITANTE, não do dono da página — metade de quem
+         abre o perfil vê fundo #ffffff. Todo painel de largura cheia precisa
+         de: fundo opaco + rx=16 + rim hairline + conteúdo dentro de <clipPath>.
+         Sem isso vira laje de canto vivo boiando no branco. (A leva "abismo"
+         de 28/07 nasceu sem essa proteção; corrigida na série -v2.)
        · Zero shields.io nesta página. Um <img> = um link só.
        · Alt significativo em PT-BR em toda imagem.
        · Números SÓ de fatos reais, arredondados PARA BAIXO (343 → 340+).
@@ -14,7 +19,7 @@
      ════════════════════════════════════════════════════════════════════════ -->
 
 <a href="https://paulo-marcos-lucio.github.io">
-  <img src="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/hero-abismo.svg" alt="Paulo Marcos Lucio — Segurança de Aplicações Web (AppSec): diagnóstico e correção de vulnerabilidades web. Olho de vigília com radar no abismo bioluminescente." width="100%"/>
+  <img src="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/hero-abismo-v2.svg" alt="Paulo Marcos Lucio — Segurança de Aplicações Web (AppSec): diagnóstico e correção de vulnerabilidades web. Olho de vigília com radar no abismo bioluminescente." width="100%"/>
 </a>
 
 <div align="center">
@@ -65,15 +70,15 @@ Não venho "de fora" da engenharia. Meu background é **backend Java para o merc
 
 Um portfólio de **ferramentas de segurança de aplicações** — cada uma cobre uma frente do OWASP Top 10, do perímetro à autenticação, dos segredos vazados à cadeia de suprimentos. Todas com **testes, CI e documentação de nível de produto**: a ferramenta **é** a prova do critério técnico.
 
-<a href="https://github.com/Paulo-Marcos-Lucio/sentinela"><img src="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/banner-sentinela-abismo.svg" alt="Sentinela — diagnóstico externo não-intrusivo (TLS, cabeçalhos, cookies, CORS, DNS/e-mail, descoberta de subdomínios): o olho que vela a superfície da aplicação" width="100%"/></a>
+<a href="https://github.com/Paulo-Marcos-Lucio/sentinela"><img src="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/banner-sentinela-abismo-v2.svg" alt="Sentinela — diagnóstico externo não-intrusivo (TLS, cabeçalhos, cookies, CORS, DNS/e-mail, descoberta de subdomínios): o olho que vela a superfície da aplicação" width="100%"/></a>
 
-<a href="https://github.com/Paulo-Marcos-Lucio/guardiao"><img src="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/banner-guardiao-abismo.svg" alt="Guardião — scanner de segredos no código e no histórico Git (regex + entropia, baseline, SARIF, pre-commit): o escudo que guarda a fronteira" width="100%"/></a>
+<a href="https://github.com/Paulo-Marcos-Lucio/guardiao"><img src="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/banner-guardiao-abismo-v2.svg" alt="Guardião — scanner de segredos no código e no histórico Git (regex + entropia, baseline, SARIF, pre-commit): o escudo que guarda a fronteira" width="100%"/></a>
 
-<a href="https://github.com/Paulo-Marcos-Lucio/chaveiro"><img src="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/banner-chaveiro-abismo.svg" alt="Chaveiro — auditor de tokens JWT/JWS (alg:none, confusão de algoritmo, brute de segredo HMAC, validação de claims): as chaves que flutuam no escuro" width="100%"/></a>
+<a href="https://github.com/Paulo-Marcos-Lucio/chaveiro"><img src="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/banner-chaveiro-abismo-v2.svg" alt="Chaveiro — auditor de tokens JWT/JWS (alg:none, confusão de algoritmo, brute de segredo HMAC, validação de claims): as chaves que flutuam no escuro" width="100%"/></a>
 
-<a href="https://github.com/Paulo-Marcos-Lucio/esteira"><img src="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/banner-esteira-abismo.svg" alt="Esteira — auditor de segurança de CI/CD do GitHub Actions (script injection, actions não-fixadas por SHA, pull_request_target, SARIF): a correnteza que inspeciona o fluxo" width="100%"/></a>
+<a href="https://github.com/Paulo-Marcos-Lucio/esteira"><img src="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/banner-esteira-abismo-v2.svg" alt="Esteira — auditor de segurança de CI/CD do GitHub Actions (script injection, actions não-fixadas por SHA, pull_request_target, SARIF): a correnteza que inspeciona o fluxo" width="100%"/></a>
 
-<a href="https://github.com/Paulo-Marcos-Lucio/laboratorio-owasp"><img src="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/banner-laboratorio-abismo.svg" alt="Laboratório OWASP — alvo deliberadamente vulnerável para treino de exploração e correção (OWASP Top 10, Java/Spring): a cultura que pulsa no laboratório submerso" width="100%"/></a>
+<a href="https://github.com/Paulo-Marcos-Lucio/laboratorio-owasp"><img src="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/banner-laboratorio-abismo-v2.svg" alt="Laboratório OWASP — alvo deliberadamente vulnerável para treino de exploração e correção (OWASP Top 10, Java/Spring): a cultura que pulsa no laboratório submerso" width="100%"/></a>
 
 | | Projeto | O que faz | Frente | Testes |
 | :---: | --- | --- | :---: | :---: |
