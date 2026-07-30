@@ -14,7 +14,7 @@
        · Alt significativo em PT-BR em toda imagem. Quando o SVG é uma
          imagem-de-texto, o alt do <img> tem de CARREGAR a informação: o
          aria-label interno do SVG é descartado pelo camo do GitHub.
-       · Números SÓ de fatos reais, arredondados PARA BAIXO (466 → 460+).
+       · Números SÓ de fatos reais, arredondados PARA BAIXO (819 → 800+).
        · SARIF 2.1.0 existe no Sentinela, no Guardião e na Esteira.
          O Chaveiro NÃO tem SARIF. (Conferido no código público em 29/07/2026;
          o comentário anterior, que dizia que o Sentinela não tinha, era falso.)
@@ -29,7 +29,7 @@
 <a href="https://paulo-marcos-lucio.github.io">
   <picture>
     <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/hero-abismo-v3-parado.svg">
-    <img src="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/hero-abismo-v3.svg" alt="Paulo Marcos Lucio — Segurança de Aplicações Web (AppSec): diagnóstico e correção de vulnerabilidades web. Olho de vigília com radar no abismo bioluminescente. Rodapé do painel: 5 ferramentas · 460+ testes automatizados · MIT · CI verde." width="100%"/>
+    <img src="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/hero-abismo-v3.svg" alt="Paulo Marcos Lucio — Segurança de Aplicações Web (AppSec): diagnóstico e correção de vulnerabilidades web. Olho de vigília com radar no abismo bioluminescente. Rodapé do painel: 5 ferramentas · 800+ testes automatizados · MIT · CI verde." width="100%"/>
   </picture>
 </a>
 
@@ -78,7 +78,7 @@ Não venho "de fora" da engenharia. Meu background é **backend Java para o merc
 
 <br/>
 
-<img src="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/ops-telemetry-v2.svg" alt="Telemetria da operação: 5 ferramentas abertas, 460+ testes automatizados, licença MIT com CI verde nas cinco ferramentas da suíte, mapeamento OWASP Top 10 e LGPD art. 46" width="100%"/>
+<img src="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/ops-telemetry-v2.svg" alt="Telemetria da operação: 5 ferramentas abertas, 800+ testes automatizados, licença MIT com CI verde nas cinco ferramentas da suíte, mapeamento OWASP Top 10 e LGPD art. 46" width="100%"/>
 
 <br/>
 
@@ -115,11 +115,11 @@ Um portfólio de **ferramentas de segurança de aplicações** — cada uma cobr
 
 | | Projeto | O que faz | Frente | Testes |
 | :---: | --- | --- | :---: | :---: |
-| `01` | **[Sentinela](https://github.com/Paulo-Marcos-Lucio/sentinela)** | Diagnóstico não-intrusivo de config web: cabeçalhos, TLS, cookies, CORS, DNS/e-mail (SPF/DMARC/MTA-STS), CSP profunda, descoberta de subdomínios via Certificate Transparency (`--descobrir`) e detecção de subdomain takeover; relatórios console/markdown/HTML/JSON e **SARIF 2.1.0** com plano de ação. `Python` | Perímetro | `160+` |
-| `02` | **[Guardião](https://github.com/Paulo-Marcos-Lucio/guardiao)** | Scanner de segredos vazados no código **e no histórico Git**: regex + entropia de Shannon, baseline, **SARIF 2.1.0**, hook pre-commit; detecta CPF/CNPJ (LGPD). `Python` | Segredos | `79` |
-| `03` | **[Chaveiro](https://github.com/Paulo-Marcos-Lucio/chaveiro)** | Auditor de tokens **JWT/JWS**: `alg:none`, confusão RS→HS, brute de segredo HMAC (inclui segredo vazio), `kid`/`jku` SSRF, validação de claims + referência de validação correta. `Python` | Autenticação | `67` |
-| `04` | **[Esteira](https://github.com/Paulo-Marcos-Lucio/esteira)** | Auditor de segurança de **CI/CD (GitHub Actions)**: script injection, actions não-fixadas por SHA, `pull_request_target`, permissões, `secrets: inherit`, imagens não-fixadas; saída **SARIF 2.1.0**. `Python` | Cadeia de suprimentos | `120+` |
-| `05` | **[Laboratório OWASP](https://github.com/Paulo-Marcos-Lucio/laboratorio-owasp)** | **8 vulnerabilidades** cobrindo **4 categorias do OWASP Top 10**, cada uma no par **vulnerável → exploit → corrigido** com teste JUnit provando os dois lados: **A01** IDOR, Path Traversal, Open Redirect · **A02** MD5→BCrypt · **A03** SQLi, XSS, Command Injection · **A10** SSRF. `Java 21` · `Spring Boot` | Correção | `36` |
+| `01` | **[Sentinela](https://github.com/Paulo-Marcos-Lucio/sentinela)** | Diagnóstico não-intrusivo de config web: cabeçalhos, TLS, cookies, CORS, DNS/e-mail (SPF/DMARC/MTA-STS), CSP profunda, descoberta de subdomínios via Certificate Transparency e subdomain takeover, **e superfície de injeção** (formulários, CSRF, reflexão de parâmetro/XSS); relatórios console/markdown/HTML/JSON e **SARIF 2.1.0** com plano de ação. A edição **Pro** confirma injeção ativamente. `Python` | Perímetro | `313` |
+| `02` | **[Guardião](https://github.com/Paulo-Marcos-Lucio/guardiao)** | Scanner de segredos vazados no código **e no histórico Git**: regex de provedor + **entropia normalizada (Miller-Madow)**, baseline, **SARIF 2.1.0**, hook pre-commit; valida CPF/CNPJ por dígito (LGPD). Recall 100% e 2,16 falsos-positivos por mil arquivos, medido. `Python` | Segredos | `141` |
+| `03` | **[Chaveiro](https://github.com/Paulo-Marcos-Lucio/chaveiro)** | Auditor de tokens **JWT/JWS**: `alg:none`, confusão RS→HS, brute de segredo HMAC, `kid`/`jku` SSRF, JWT aninhado, CPF em claim, validação de claims + referência de validação correta. 22/22 vetores de ataque, medido. `Python` | Autenticação | `126` |
+| `04` | **[Esteira](https://github.com/Paulo-Marcos-Lucio/esteira)** | Auditor de segurança de **CI/CD (GitHub Actions)**: script injection, actions não-fixadas por SHA, `pull_request_target`, permissões, `secrets: inherit`, imagens não-fixadas; saída **SARIF 2.1.0**. `Python` | Cadeia de suprimentos | `190` |
+| `05` | **[Laboratório OWASP](https://github.com/Paulo-Marcos-Lucio/laboratorio-owasp)** | Vulnerabilidades em várias categorias do **OWASP Top 10:2025** — com destaque para **A05 Injeção** (SQLi com correção parametrizada, XSS, Command Injection), além de A01/A04 e SSRF — cada uma no par **vulnerável → exploit → corrigido** com teste JUnit provando os dois lados. `Java 21` · `Spring Boot` | Correção | `49` |
 
 <div align="center">
 

@@ -61,7 +61,7 @@
   <text x="76" y="220" font-family="Segoe UI,system-ui,sans-serif" font-weight="800" font-size="66" letter-spacing="-1.5" fill="#eafaff">Paulo Marcos Lucio</text>
   <text x="80" y="262" font-family="Segoe UI,system-ui,sans-serif" font-size="23" fill="#9fd4ea">Diagnóstico e correção de vulnerabilidades web</text>
   <text x="80" y="312" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="14.5" fill="#7fb4d0">OWASP Top 10  ·  TLS/PKI  ·  Cabeçalhos  ·  CORS  ·  DNS  ·  LGPD art. 46</text>
-  <text x="80" y="348" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="13.5" fill="#5b7f96">5 ferramentas  ·  460+ testes automatizados  ·  MIT  ·  CI ✓</text>
+  <text x="80" y="348" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="13.5" fill="#5b7f96">5 ferramentas  ·  800+ testes automatizados  ·  MIT  ·  CI ✓</text>
   <rect x="80" y="372" width="150" height="4" rx="2" fill="url(#h-bar)" />
   </g>
   <rect x=".5" y=".5" width="1279" height="439" rx="15.5" fill="none" stroke="#35d6ff" stroke-opacity=".42" stroke-width="1" />
