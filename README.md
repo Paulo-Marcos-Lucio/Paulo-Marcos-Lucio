@@ -19,7 +19,7 @@
          O Chaveiro NÃO tem SARIF. (Conferido no código público em 29/07/2026;
          o comentário anterior, que dizia que o Sentinela não tinha, era falso.)
        · "OWASP Top 10" no Laboratório SEMPRE com o qualificador: são
-         8 vulnerabilidades cobrindo 4 categorias — A01, A02, A03 e A10.
+         8 vulnerabilidades cobrindo 3 categorias do OWASP Top 10:2025 — A01, A04 e A05.
        · SMIL não respeita prefers-reduced-motion. Toda peça pesada precisa
          de um par -parado.svg servido via <picture media="...">.
        · Nenhuma certificação é mencionada — não inventar OSCP/CEH/clientes.
@@ -71,7 +71,7 @@
 
 Atuo com **segurança de aplicações web (AppSec)**: **diagnóstico e correção de vulnerabilidades**, hardening e prevenção de falhas em sistemas expostos na internet — cabeçalhos de segurança, TLS/PKI, cookies, CORS, exposição de arquivos e segurança de DNS/e-mail — tudo mapeado ao **OWASP Top 10** e à **LGPD (art. 46)**.
 
-Não venho "de fora" da engenharia. Meu background é **backend Java para o mercado financeiro regulado** — autenticação, mTLS ICP-Brasil, FAPI, integrações Pix e Open Finance — ou seja, venho de construir sistemas **onde errar em segurança não é uma opção**. Trago essa régua para o diagnóstico da sua aplicação: minhas recomendações de correção são realistas para o time de dev, porque eu **fui** o time de dev.
+Não venho "de fora" da engenharia. Sou **desenvolvedor Java/Spring**, e aprendi os sistemas financeiros regulados brasileiros do jeito mais difícil: **escrevendo implementações de referência deles** — Pix Automático, Pix por Aproximação, Open Finance (PISP), DICT, Open Insurance —, com mTLS ICP-Brasil, FAPI, arquitetura hexagonal e teste. São **6 repositórios públicos** aqui do lado; abra qualquer um. É a régua que eu trago para o diagnóstico da sua aplicação: minhas recomendações de correção são realistas para o time de dev, porque eu **sou** o time de dev.
 
 > **Precisa saber onde sua aplicação web está exposta — e como corrigir?**
 > **[Fale comigo no LinkedIn](https://www.linkedin.com/in/paulo-marcos-a07379174/)** · ou veja os pacotes em **[paulo-marcos-lucio.github.io](https://paulo-marcos-lucio.github.io)**
@@ -115,8 +115,8 @@ Um portfólio de **ferramentas de segurança de aplicações** — cada uma cobr
 
 | | Projeto | O que faz | Frente | Testes |
 | :---: | --- | --- | :---: | :---: |
-| `01` | **[Sentinela](https://github.com/Paulo-Marcos-Lucio/sentinela)** | Diagnóstico não-intrusivo de config web: cabeçalhos, TLS, cookies, CORS, DNS/e-mail (SPF/DMARC/MTA-STS), CSP profunda, descoberta de subdomínios via Certificate Transparency e subdomain takeover, **e superfície de injeção** (formulários, CSRF, reflexão de parâmetro/XSS); relatórios console/markdown/HTML/JSON e **SARIF 2.1.0** com plano de ação. A edição **Pro** confirma injeção ativamente. `Python` | Perímetro | `313` |
-| `02` | **[Guardião](https://github.com/Paulo-Marcos-Lucio/guardiao)** | Scanner de segredos vazados no código **e no histórico Git**: regex de provedor + **entropia normalizada (Miller-Madow)**, baseline, **SARIF 2.1.0**, hook pre-commit; valida CPF/CNPJ por dígito (LGPD). Recall 100% e 2,16 falsos-positivos por mil arquivos, medido. `Python` | Segredos | `141` |
+| `01` | **[Sentinela](https://github.com/Paulo-Marcos-Lucio/sentinela)** | Diagnóstico não-intrusivo de config web: cabeçalhos, TLS, cookies, CORS, DNS/e-mail (SPF/DMARC/MTA-STS), CSP profunda, descoberta de subdomínios via Certificate Transparency e subdomain takeover, **e superfície de injeção** (formulários, CSRF, reflexão de parâmetro/XSS); relatórios console/markdown/HTML/JSON e **SARIF 2.1.0** com plano de ação. A edição **Pro** confirma injeção ativamente. `Python` | Perímetro | `424` |
+| `02` | **[Guardião](https://github.com/Paulo-Marcos-Lucio/guardiao)** | Scanner de segredos vazados no código **e no histórico Git**: regex de provedor + **entropia normalizada (Miller-Madow)**, baseline, **SARIF 2.1.0**, hook pre-commit; valida CPF/CNPJ por dígito (LGPD). Recall 100% e 2,16 falsos-positivos por mil arquivos, medido. `Python` | Segredos | `165` |
 | `03` | **[Chaveiro](https://github.com/Paulo-Marcos-Lucio/chaveiro)** | Auditor de tokens **JWT/JWS**: `alg:none`, confusão RS→HS, brute de segredo HMAC, `kid`/`jku` SSRF, JWT aninhado, CPF em claim, validação de claims + referência de validação correta. 22/22 vetores de ataque, medido. `Python` | Autenticação | `126` |
 | `04` | **[Esteira](https://github.com/Paulo-Marcos-Lucio/esteira)** | Auditor de segurança de **CI/CD (GitHub Actions)**: script injection, actions não-fixadas por SHA, `pull_request_target`, permissões, `secrets: inherit`, imagens não-fixadas; saída **SARIF 2.1.0**. `Python` | Cadeia de suprimentos | `190` |
 | `05` | **[Laboratório OWASP](https://github.com/Paulo-Marcos-Lucio/laboratorio-owasp)** | Vulnerabilidades em várias categorias do **OWASP Top 10:2025** — com destaque para **A05 Injeção** (SQLi com correção parametrizada, XSS, Command Injection), além de A01/A04 e SSRF — cada uma no par **vulnerável → exploit → corrigido** com teste JUnit provando os dois lados. `Java 21` · `Spring Boot` | Correção | `49` |
