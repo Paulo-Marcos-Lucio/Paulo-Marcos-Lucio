@@ -35,6 +35,10 @@
 
 <div align="center">
 
+**Eu escrevi as implementações de referência do Pix, do Open Finance e do DICT — sistemas onde errar em segurança não é opção. Agora eu procuro o que está exposto na _sua_ aplicação, antes que vire incidente.**
+
+<br/>
+
 <a href="https://www.linkedin.com/in/paulo-marcos-a07379174/">
   <img src="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/btn-linkedin-v2.svg" alt="LinkedIn — falar com Paulo Marcos Lucio" width="210"/>
 </a>
@@ -65,16 +69,25 @@
   </picture>
 </a></div>
 
+<div align="center">
+
+**Este é o meu próprio site.** Rodei o Sentinela, o resultado foi **C · 70/100** e eu publiquei sem maquiar — Content-Security-Policy e DMARC ausentes inclusive. Diagnóstico real de 21/07/2026, em modo não-intrusivo, reproduzível em dois comandos. Quem esconde a própria nota é quem tem medo dela.
+
+</div>
+
 <br/>
 
 ## `~/` Sobre
 
-Atuo com **segurança de aplicações web (AppSec)**: **diagnóstico e correção de vulnerabilidades**, hardening e prevenção de falhas em sistemas expostos na internet — cabeçalhos de segurança, TLS/PKI, cookies, CORS, exposição de arquivos e segurança de DNS/e-mail — tudo mapeado ao **OWASP Top 10** e à **LGPD (art. 46)**.
+Eu **sou o time de dev** que escreveu segurança em produção. Desenvolvedor **Java/Spring**, autor de **implementações de referência** dos sistemas financeiros regulados brasileiros — Pix Automático, Pix por Aproximação, Open Finance (PISP), DICT, Open Insurance —, com mTLS ICP-Brasil, FAPI, arquitetura hexagonal e teste. São **6 repositórios públicos** aqui do lado; abra qualquer um. Essa é a régua que eu trago para a **sua** aplicação: minhas recomendações de correção cabem no sprint do time — porque eu já estive do lado que teria que aplicá-las.
 
-Não venho "de fora" da engenharia. Sou **desenvolvedor Java/Spring**, e aprendi os sistemas financeiros regulados brasileiros do jeito mais difícil: **escrevendo implementações de referência deles** — Pix Automático, Pix por Aproximação, Open Finance (PISP), DICT, Open Insurance —, com mTLS ICP-Brasil, FAPI, arquitetura hexagonal e teste. São **6 repositórios públicos** aqui do lado; abra qualquer um. É a régua que eu trago para o diagnóstico da sua aplicação: minhas recomendações de correção são realistas para o time de dev, porque eu **sou** o time de dev.
+Hoje atuo com **segurança de aplicações web (AppSec)**: **diagnóstico e correção de vulnerabilidades**, hardening e prevenção em sistemas expostos na internet — cabeçalhos de segurança, TLS/PKI, cookies, CORS, exposição de arquivos, DNS/e-mail e superfície de injeção — tudo mapeado ao **OWASP Top 10** e à **LGPD (art. 46)**.
 
-> **Precisa saber onde sua aplicação web está exposta — e como corrigir?**
-> **[Fale comigo no LinkedIn](https://www.linkedin.com/in/paulo-marcos-a07379174/)** · ou veja os pacotes em **[paulo-marcos-lucio.github.io](https://paulo-marcos-lucio.github.io)**
+Sem OSCP, sem CEH, sem cliente famoso para citar. A minha credencial é **auditável**: cinco ferramentas abertas, com teste e CI verde, e o auto-scan do meu próprio site publicado com a nota que deu. E eu não vendo ferramenta-milagre — nenhum scanner sozinho vence, o gitleaks é mais enxuto que o meu e eu digo isso em voz alta. O que você contrata não é o scanner: é o **método**, a triagem que separa o real do ruído, a correção e o laudo datado.
+
+> **Precisa saber onde a sua aplicação web está exposta — e como corrigir?**
+> **[› Falar agora no WhatsApp](https://wa.me/5512991478991?text=Ol%C3%A1%20Paulo%2C%20vim%20pelo%20seu%20GitHub%20e%20quero%20um%20diagn%C3%B3stico%20de%20seguran%C3%A7a%20da%20minha%20aplica%C3%A7%C3%A3o.)** — me diga em uma linha qual é a aplicação e o contexto.
+> Ainda medindo? Rode o **[Sentinela](https://github.com/Paulo-Marcos-Lucio/sentinela)** no seu domínio; se a nota vier abaixo de B, me manda o `relatorio.json` e a conversa já começa no seu achado, não no meu discurso.
 
 <br/>
 
@@ -84,48 +97,56 @@ Não venho "de fora" da engenharia. Sou **desenvolvedor Java/Spring**, e aprendi
 
 ## `~/` Suíte AppSec
 
-Um portfólio de **ferramentas de segurança de aplicações** — cada uma cobre uma frente do OWASP Top 10, do perímetro à autenticação, dos segredos vazados à cadeia de suprimentos. Todas com **testes, CI e documentação de nível de produto**: a ferramenta **é** a prova do critério técnico.
+Um portfólio de **ferramentas de segurança de aplicações** — cada uma cobre uma frente do OWASP Top 10, do perímetro à autenticação, dos segredos vazados à cadeia de suprimentos. Todas com **testes, CI e documentação de nível de produto**: a ferramenta **é** a prova do critério técnico. Os números desta seção não são folheto — **rode você mesmo, em dois comandos por repositório.**
 
 <a href="https://github.com/Paulo-Marcos-Lucio/sentinela"><picture>
 <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/banner-sentinela-abismo-v2-parado.svg">
-<img src="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/banner-sentinela-abismo-v2.svg" alt="Sentinela — diagnóstico externo não-intrusivo: o que o atacante vê. Chips: TLS, Cabeçalhos, DNS/CT. Selo &quot;PRO · privado&quot;: a leitura profunda fica na edição Pro, que é privada. &quot;O olho que vela a sua superfície — no escuro.&quot;" width="100%"/>
+<img src="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/banner-sentinela-abismo-v2.svg" alt="Sentinela — diagnóstico externo não-intrusivo: o que o atacante vê. Chips: TLS, Cabeçalhos, DNS/CT. Selo &quot;PRO · privado&quot;: a varredura não-intrusiva fica aberta; a edição Pro acrescenta o motor ativo que confirma a falha. &quot;O olho que vela a sua superfície — no escuro.&quot;" width="100%"/>
 </picture></a>
 
 <a href="https://github.com/Paulo-Marcos-Lucio/guardiao"><picture>
 <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/banner-guardiao-abismo-v2-parado.svg">
-<img src="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/banner-guardiao-abismo-v2.svg" alt="Guardião — scanner de segredos no código e no histórico Git. Chips: regex+entropia, baseline, pre-commit. Selo &quot;PRO · privado&quot;: a leitura profunda fica na edição Pro, que é privada. &quot;O escudo que guarda a fronteira.&quot;" width="100%"/>
+<img src="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/banner-guardiao-abismo-v2.svg" alt="Guardião — scanner de segredos no código e no histórico Git. Chips: regex+entropia, baseline, pre-commit. Selo &quot;PRO · privado&quot;: o motor de detecção é o mesmo que fica aberto; a edição Pro é o serviço — triagem, rotação e laudo datado. &quot;O escudo que guarda a fronteira.&quot;" width="100%"/>
 </picture></a>
 
 <a href="https://github.com/Paulo-Marcos-Lucio/chaveiro"><picture>
 <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/banner-chaveiro-abismo-v2-parado.svg">
-<img src="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/banner-chaveiro-abismo-v2.svg" alt="Chaveiro — auditor de tokens JWT/JWS. Chips: alg:none, alg-confusion, HMAC crack. Ilustração do token em três partes: eyJ… .payload. sig. Selo &quot;PRO · privado&quot;: a leitura profunda fica na edição Pro, que é privada." width="100%"/>
+<img src="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/banner-chaveiro-abismo-v2.svg" alt="Chaveiro — auditor de tokens JWT/JWS. Chips: alg:none, alg-confusion, HMAC crack. Ilustração do token em três partes: eyJ… .payload. sig. Selo &quot;PRO · privado&quot;: o detector é o mesmo que fica aberto; a edição Pro é o serviço — PoC autorizado e correção verificada." width="100%"/>
 </picture></a>
 
 <a href="https://github.com/Paulo-Marcos-Lucio/esteira"><picture>
 <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/banner-esteira-abismo-v2-parado.svg">
-<img src="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/banner-esteira-abismo-v2.svg" alt="Esteira — segurança de pipelines · GitHub Actions. Chips: script-injection, SHA-pinning, pr-target. Selo &quot;PRO · privado&quot;: a leitura profunda fica na edição Pro, que é privada. &quot;O ataque moderno entra pela correnteza. Ela vigia o fluxo.&quot;" width="100%"/>
+<img src="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/banner-esteira-abismo-v2.svg" alt="Esteira — segurança de pipelines · GitHub Actions. Chips: script-injection, SHA-pinning, pr-target. Selo &quot;PRO · privado&quot;: o motor é o mesmo que fica aberto; a edição Pro é o serviço — a correção aplicada via Pull Request. &quot;O ataque moderno entra pela correnteza. Ela vigia o fluxo.&quot;" width="100%"/>
 </picture></a>
 
 <a href="https://github.com/Paulo-Marcos-Lucio/laboratorio-owasp"><picture>
 <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/banner-laboratorio-abismo-v2-parado.svg">
-<img src="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/banner-laboratorio-abismo-v2.svg" alt="Laboratório OWASP — laboratório de vulnerabilidades. Chips: OWASP Top 10 (na prática, 8 vulnerabilidades em 4 categorias: A01, A02, A03 e A10), Java, hands-on. Selo &quot;PRO · privado&quot;: a leitura profunda fica na edição Pro, que é privada. &quot;Onde a falha é de propósito — pra você aprender a defender.&quot;" width="100%"/>
+<img src="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/banner-laboratorio-abismo-v2.svg" alt="Laboratório OWASP — laboratório de vulnerabilidades. Chips: OWASP Top 10 (na prática, 8 vulnerabilidades em 3 categorias: A01, A04 e A05), Java, hands-on. Selo &quot;PRO · privado&quot;: o laboratório é aberto por inteiro — a falha é de propósito, para você aprender; a camada Pro é a mentoria conduzida, não um motor escondido. &quot;Onde a falha é de propósito — pra você aprender a defender.&quot;" width="100%"/>
 </picture></a>
 
-<sub>**Sobre o selo `PRO · privado`:** cada ferramenta tem uma **edição Pro privada**. O que está público é a vitrine auditável — código, testes e critério à vista de quem quiser conferir. A leitura mais profunda (a que aponta exatamente onde apertar) fica fora do alcance de quem não deveria tê-la. Quem contrata um diagnóstico recebe o resultado da edição Pro.</sub>
+**A fronteira `PRO · privado`, sem letra miúda.** O motor que está aberto é o mesmo que eu rodo no serviço — byte a byte. **Nada sai do público: o que é gratuito hoje continua gratuito, para sempre.** A edição Pro nunca tira — ela só *acrescenta*, e sempre diz por quê:
+
+- No **Sentinela**, acrescenta **código**: o motor ativo que *confirma* a falha em vez de só apontá-la. Ele emite requisição contra o alvo — por isso só roda com autorização por escrito, não num binário que qualquer um baixa.
+- Nas outras ferramentas, o motor é **idêntico** ao que você baixa; o que a Pro acrescenta é o **serviço** — a triagem que diz quais achados são reais, a correção aplicada, o laudo datado — mais o acervo de regras que eu mantenho semana a semana.
+- O **Laboratório** é a exceção: é sala de aula, aberto por inteiro; ali a camada Pro é a mentoria conduzida, não um motor.
+
+Detectar é de graça. **Corrigir é trabalho — e trabalho é o que eu vendo.**
 
 | | Projeto | O que faz | Frente | Testes |
 | :---: | --- | --- | :---: | :---: |
 | `01` | **[Sentinela](https://github.com/Paulo-Marcos-Lucio/sentinela)** | Diagnóstico não-intrusivo de config web: cabeçalhos, TLS, cookies, CORS, DNS/e-mail (SPF/DMARC/MTA-STS), CSP profunda, descoberta de subdomínios via Certificate Transparency e subdomain takeover, **e superfície de injeção** (formulários, CSRF, reflexão de parâmetro/XSS); relatórios console/markdown/HTML/JSON e **SARIF 2.1.0** com plano de ação. A edição **Pro** confirma injeção ativamente. `Python` | Perímetro | `424` |
-| `02` | **[Guardião](https://github.com/Paulo-Marcos-Lucio/guardiao)** | Scanner de segredos vazados no código **e no histórico Git**: regex de provedor + **entropia normalizada (Miller-Madow)**, baseline, **SARIF 2.1.0**, hook pre-commit; valida CPF/CNPJ por dígito (LGPD). Recall 100% e 2,16 falsos-positivos por mil arquivos, medido. `Python` | Segredos | `165` |
-| `03` | **[Chaveiro](https://github.com/Paulo-Marcos-Lucio/chaveiro)** | Auditor de tokens **JWT/JWS**: `alg:none`, confusão RS→HS, brute de segredo HMAC, `kid`/`jku` SSRF, JWT aninhado, CPF em claim, validação de claims + referência de validação correta. 22/22 vetores de ataque, medido. `Python` | Autenticação | `126` |
-| `04` | **[Esteira](https://github.com/Paulo-Marcos-Lucio/esteira)** | Auditor de segurança de **CI/CD (GitHub Actions)**: script injection, actions não-fixadas por SHA, `pull_request_target`, permissões, `secrets: inherit`, imagens não-fixadas; saída **SARIF 2.1.0**. `Python` | Cadeia de suprimentos | `190` |
-| `05` | **[Laboratório OWASP](https://github.com/Paulo-Marcos-Lucio/laboratorio-owasp)** | Vulnerabilidades em várias categorias do **OWASP Top 10:2025** — com destaque para **A05 Injeção** (SQLi com correção parametrizada, XSS, Command Injection), além de A01/A04 e SSRF — cada uma no par **vulnerável → exploit → corrigido** com teste JUnit provando os dois lados. `Java 21` · `Spring Boot` | Correção | `49` |
+| `02` | **[Guardião](https://github.com/Paulo-Marcos-Lucio/guardiao)** | Scanner de segredos vazados no código **e no histórico Git**: regex de provedor + **entropia normalizada (Miller-Madow)**, baseline, **SARIF 2.1.0**, hook pre-commit; valida CPF/CNPJ por dígito (LGPD). Recall **13/14** no corpus bench, **0 falso-positivo**. `Python` | Segredos | `186` |
+| `03` | **[Chaveiro](https://github.com/Paulo-Marcos-Lucio/chaveiro)** | Auditor de tokens **JWT/JWS**: `alg:none`, confusão RS→HS, brute de segredo HMAC, `kid`/`jku` SSRF, JWT aninhado, CPF em claim, validação de claims + referência de validação correta. **22/22** vetores no corpus, **0 falso-positivo** em 6 tokens legítimos, ~38 mil tokens/s. `Python` | Autenticação | `191` |
+| `04` | **[Esteira](https://github.com/Paulo-Marcos-Lucio/esteira)** | Auditor de segurança de **CI/CD (GitHub Actions)**: script injection, actions não-fixadas por SHA, `pull_request_target`, permissões, `secrets: inherit`, imagens não-fixadas; saída **SARIF 2.1.0**. **17/17** regras e **20/20** recall no corpus, **0 falso-positivo**. `Python` | Cadeia de suprimentos | `249` |
+| `05` | **[Laboratório OWASP](https://github.com/Paulo-Marcos-Lucio/laboratorio-owasp)** | **8 vulnerabilidades em 3 categorias do OWASP Top 10:2025** (A01, A04 e A05), com destaque para **A05 Injeção** (SQLi com correção parametrizada, XSS, Command Injection) — cada uma no par **vulnerável → exploit → corrigido** com teste JUnit provando os dois lados. `Java 21` · `Spring Boot` | Correção | `49` |
 
 <div align="center">
 
 **[Ver todos os repositórios →](https://github.com/Paulo-Marcos-Lucio?tab=repositories)**
 
 </div>
+
+<sub>**E onde eu perco?** Publiquei o [benchmark honesto contra gitleaks, trufflehog e zizmor](https://github.com/Paulo-Marcos-Lucio/guardiao/blob/main/BENCHMARK.md) — versões e commits fixados, reproduzível, e diz onde o incumbente é mais enxuto que eu. Nenhum scanner sozinho vence; o que eu vendo é a calibração de baixo falso-positivo e o trabalho em cima do resultado.</sub>
 
 <br/>
 
@@ -169,5 +190,5 @@ Um portfólio de **ferramentas de segurança de aplicações** — cada uma cobr
 
 <img src="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/footer-vigilia.svg" alt="Vigília: diagnóstico sob autorização e escopo definido — prompt aguardando o seu comando" width="100%"/>
 
-<div align="center"><sub>Diagnóstico conduzido sempre sob autorização e escopo definido. Segurança é redução de risco — não promessa de perfeição.</sub></div>
+<div align="center"><sub>Diagnóstico sempre sob autorização e escopo definido. Segurança é redução de risco medível — comprovada com reteste datado.</sub></div>
 <!-- profile-readme -->
