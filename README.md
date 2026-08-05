@@ -71,7 +71,7 @@
 
 <div align="center">
 
-**Este é o meu próprio site.** Rodei o Sentinela, o resultado foi **C · 70/100** e eu publiquei sem maquiar — Content-Security-Policy e DMARC ausentes inclusive. Diagnóstico real de 21/07/2026, em modo não-intrusivo, reproduzível em dois comandos. Quem esconde a própria nota é quem tem medo dela.
+**Este é o meu próprio site — achei, corrigi, retestei.** O primeiro scan (21/07/2026, acima) deu **C · 70/100** e listou o quê. Corrigi o que a plataforma permite (CSP via `<meta>`) e o reteste subiu para **B · 89/100** — publicado assim, sem maquiar. E **por que não é A?** Os pontos que faltam (X-Frame-Options, X-Content-Type-Options, HSTS com subdomínios) são cabeçalhos que o **GitHub Pages não deixa nenhum site definir** — limite da hospedagem, não do site, e a própria ferramenta me diz isso com a linha exata e a saída (domínio próprio + CDN). Um scanner te dá um número; um diagnóstico te diz **por que** o número é esse. Quem esconde a própria nota é quem tem medo dela.
 
 </div>
 
