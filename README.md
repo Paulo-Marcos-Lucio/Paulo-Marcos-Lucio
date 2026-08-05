@@ -42,8 +42,8 @@
 <a href="https://www.linkedin.com/in/paulo-marcos-a07379174/">
   <img src="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/btn-linkedin-v2.svg" alt="LinkedIn — falar com Paulo Marcos Lucio" width="210"/>
 </a>
-<a href="mailto:pmlsp23@gmail.com">
-  <img src="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/btn-email-v2.svg" alt="E-mail — pmlsp23@gmail.com" width="210"/>
+<a href="mailto:contatopml26@gmail.com">
+  <img src="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/btn-email-v2.svg" alt="E-mail — contatopml26@gmail.com" width="210"/>
 </a>
 <a href="https://paulo-marcos-lucio.github.io">
   <img src="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/btn-site.svg" alt="Site — serviços, pacotes e valores" width="210"/>
