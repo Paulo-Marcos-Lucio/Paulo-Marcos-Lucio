@@ -24,7 +24,17 @@
          de um par -parado.svg servido via <picture media="...">.
        · Nenhuma certificação é mencionada — não inventar OSCP/CEH/clientes.
        · Ética no footer em SVG E em <sub> de texto real, sempre.
+       · Existe README.en.md (espelho em inglês, 04/08/2026): mesma estrutura
+         1:1, mesmas imagens (SVGs continuam só em PT-BR — são 24 peças de
+         arte animada, redesenhar tudo em EN é projeto à parte). Só o texto
+         markdown real e todo `alt=` são traduzidos. Qualquer mudança de
+         CONTEÚDO real neste arquivo (texto, tabela, links) precisa da
+         mesma mudança espelhada no README.en.md, ou os dois ficam
+         dessincronizados. Os 4 botões pequenos (LinkedIn/E-mail/Site/Repos)
+         têm arte própria em inglês: assets/btn-*-en.svg.
      ════════════════════════════════════════════════════════════════════════ -->
+
+<p align="right"><a href="README.en.md">🇺🇸 Read in English</a></p>
 
 <a href="https://paulo-marcos-lucio.github.io">
   <picture>
