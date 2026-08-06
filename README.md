@@ -31,10 +31,15 @@
          CONTEÚDO real neste arquivo (texto, tabela, links) precisa da
          mesma mudança espelhada no README.en.md, ou os dois ficam
          dessincronizados. Os 4 botões pequenos (LinkedIn/E-mail/Site/Repos)
-         têm arte própria em inglês: assets/btn-*-en.svg.
+         têm arte própria em inglês: assets/btn-*-en.svg. O botão de troca de
+         idioma (topo do documento, centralizado) NÃO é um link de texto —
+         é um botão grande com bandeira (assets/btn-lang-en.svg /
+         assets/btn-lang-pt.svg): o link de texto discreto usado antes
+         (06/08/2026) passava despercebido, por isso a troca por um botão
+         chamativo no mesmo dia.
      ════════════════════════════════════════════════════════════════════════ -->
 
-<p align="right"><a href="README.en.md">🇺🇸 Read in English</a></p>
+<div align="center"><a href="README.en.md"><img src="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/btn-lang-en.svg" alt="🇺🇸 Read this profile in English" width="300"/></a></div>
 
 <a href="https://paulo-marcos-lucio.github.io">
   <picture>

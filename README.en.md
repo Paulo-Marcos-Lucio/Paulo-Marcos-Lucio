@@ -1,4 +1,4 @@
-<p align="right"><a href="README.md">🇧🇷 Ler em Português</a></p>
+<div align="center"><a href="README.md"><img src="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/btn-lang-pt.svg" alt="🇧🇷 Ler este perfil em Português" width="300"/></a></div>
 
 <!-- ════════════════════════════════════════════════════════════════════════
      Paulo Marcos Lucio · GitHub profile — VIGIL REV. B (English mirror)
