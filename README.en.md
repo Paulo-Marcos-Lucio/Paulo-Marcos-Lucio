@@ -6,7 +6,7 @@
      (see the "SVGs do perfil" decision in the assistant's session), only
      the REAL markdown text and every image `alt` are translated — the SVG
      artwork itself (hero, tool banners, Sentinela console, telemetry,
-     pipeline, stack) stays in Portuguese. Redrawing 20+ animated SVGs in a
+     pipeline, stack) stays in Portuguese. Redrawing 24 animated SVGs in a
      second language is a separate design project; the text a recruiter or
      Google actually reads is 100% English here. The 4 small nav buttons
      (LinkedIn/Email/Website/Repositories) DO have English art — see
