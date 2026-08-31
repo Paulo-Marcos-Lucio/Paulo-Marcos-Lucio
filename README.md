@@ -149,11 +149,11 @@ Detectar é de graça. **Corrigir é trabalho — e trabalho é o que eu vendo.*
 
 | | Projeto | O que faz | Frente | Testes |
 | :---: | --- | --- | :---: | :---: |
-| `01` | **[Sentinela](https://github.com/Paulo-Marcos-Lucio/sentinela)** | Diagnóstico não-intrusivo de config web: cabeçalhos, TLS, cookies, CORS, DNS/e-mail (SPF/DMARC/MTA-STS), CSP profunda, descoberta de subdomínios via Certificate Transparency e subdomain takeover, **e superfície de injeção** (formulários, CSRF, reflexão de parâmetro/XSS); relatórios console/markdown/HTML/JSON e **SARIF 2.1.0** com plano de ação. A edição **Pro** confirma injeção ativamente. `Python` | Perímetro | `424` |
-| `02` | **[Guardião](https://github.com/Paulo-Marcos-Lucio/guardiao)** | Scanner de segredos vazados no código **e no histórico Git**: regex de provedor + **entropia normalizada (Miller-Madow)**, baseline, **SARIF 2.1.0**, hook pre-commit; valida CPF/CNPJ por dígito (LGPD). Recall **13/14** no corpus bench, **0 falso-positivo**. `Python` | Segredos | `186` |
-| `03` | **[Chaveiro](https://github.com/Paulo-Marcos-Lucio/chaveiro)** | Auditor de tokens **JWT/JWS**: `alg:none`, confusão RS→HS, brute de segredo HMAC, `kid`/`jku` SSRF, JWT aninhado, CPF em claim, validação de claims + referência de validação correta. **22/22** vetores no corpus, **0 falso-positivo** em 6 tokens legítimos, ~38 mil tokens/s. `Python` | Autenticação | `191` |
-| `04` | **[Esteira](https://github.com/Paulo-Marcos-Lucio/esteira)** | Auditor de segurança de **CI/CD (GitHub Actions)**: script injection, actions não-fixadas por SHA, `pull_request_target`, permissões, `secrets: inherit`, imagens não-fixadas; saída **SARIF 2.1.0**. **17/17** regras e **20/20** recall no corpus, **0 falso-positivo**. `Python` | Cadeia de suprimentos | `249` |
-| `05` | **[Laboratório OWASP](https://github.com/Paulo-Marcos-Lucio/laboratorio-owasp)** | **8 vulnerabilidades em 3 categorias do OWASP Top 10:2025** (A01, A04 e A05), com destaque para **A05 Injeção** (SQLi com correção parametrizada, XSS, Command Injection) — cada uma no par **vulnerável → exploit → corrigido** com teste JUnit provando os dois lados. `Java 21` · `Spring Boot` | Correção | `49` |
+| `01` | **[Sentinela](https://github.com/Paulo-Marcos-Lucio/sentinela)** | Diagnóstico não-intrusivo de config web: cabeçalhos, TLS, cookies, CORS, DNS/e-mail (SPF/DMARC/MTA-STS), CSP profunda, descoberta de subdomínios via Certificate Transparency e subdomain takeover, **e superfície de injeção** (formulários, CSRF, reflexão de parâmetro/XSS); relatórios console/markdown/HTML/JSON e **SARIF 2.1.0** com plano de ação. A edição **Pro** confirma injeção ativamente. `Python` | Perímetro | `399`¹ |
+| `02` | **[Guardião](https://github.com/Paulo-Marcos-Lucio/guardiao)** | Scanner de segredos vazados no código **e no histórico Git**: regex de provedor + **entropia normalizada (Miller-Madow)**, baseline, **SARIF 2.1.0**, hook pre-commit; valida CPF/CNPJ por dígito (LGPD). Recall **13/14** (IC95% Wilson 69–99%) no corpus [`bench/`](https://github.com/Paulo-Marcos-Lucio/guardiao/tree/main/bench), **0 falso-positivo**. `Python` | Segredos | `250`¹ |
+| `03` | **[Chaveiro](https://github.com/Paulo-Marcos-Lucio/chaveiro)** | Auditor de tokens **JWT/JWS**: `alg:none`, confusão RS→HS, brute de segredo HMAC, `kid`/`jku` SSRF, JWT aninhado, CPF em claim, validação de claims + referência de validação correta. **22/22** vetores no corpus (IC95% Wilson 85–100%), **0 falso-positivo** em 6 tokens legítimos. `Python` | Autenticação | `218`¹ |
+| `04` | **[Esteira](https://github.com/Paulo-Marcos-Lucio/esteira)** | Auditor de segurança de **CI/CD (GitHub Actions)**: script injection, actions não-fixadas por SHA, `pull_request_target`, permissões, `secrets: inherit`, imagens não-fixadas; saída **SARIF 2.1.0**. **17/17** regras e **20/20** recall no corpus (IC95% Wilson 84–100%), **0 falso-positivo**. `Python` | Cadeia de suprimentos | `303`¹ |
+| `05` | **[Laboratório OWASP](https://github.com/Paulo-Marcos-Lucio/laboratorio-owasp)** | **8 vulnerabilidades em 3 categorias do OWASP Top 10:2025** (A01, A04 e A05), com destaque para **A05 Injeção** (SQLi com correção parametrizada, XSS, Command Injection) — cada uma no par **vulnerável → exploit → corrigido** com teste JUnit provando os dois lados. `Java 21` · `Spring Boot` | Correção | `49`¹ |
 | `06` | **[Observatório da Superfície](https://github.com/Paulo-Marcos-Lucio/observatorio-da-superficie)** | Leitura passiva e contínua de cabeçalhos de segurança, TLS, DNS e Certificate Transparency num punhado de alvos próprios e de referência, **guardada como série temporal** — um relatório de um dia só diz como o alvo estava naquele dia; a mudança só aparece medindo todo dia e comparando. Roda sozinho no GitHub Actions, público. `Python` | Vigilância | `38` |
 
 <div align="center">
@@ -162,7 +162,53 @@ Detectar é de graça. **Corrigir é trabalho — e trabalho é o que eu vendo.*
 
 </div>
 
+<sub>¹ Coluna "Testes" medida em **2026-08-31**, `pytest -q` (Sentinela/Guardião/Chaveiro/Esteira) ou `./mvnw -B verify` (Laboratório), no `main` de cada repositório: Sentinela `42808aa`, Guardião `496db84` (+1 pulado), Chaveiro `909d1ed`, Esteira `f39a387`, Laboratório `8fbda90`. Formato explicado na seção "Como eu reporto números", logo abaixo. Observatório da Superfície não tem commit citado aqui porque este perfil não tem o repositório clonado nesta revisão — número não reverificado.</sub>
+
 <sub>**E onde eu perco?** Publiquei o [benchmark honesto contra gitleaks, trufflehog e zizmor](https://github.com/Paulo-Marcos-Lucio/guardiao/blob/main/BENCHMARK.md) — versões e commits fixados, reproduzível, e diz onde o incumbente é mais enxuto que eu. Nenhum scanner sozinho vence; o que eu vendo é a calibração de baixo falso-positivo e o trabalho em cima do resultado.</sub>
+
+<br/>
+
+## `~/` Como eu reporto números
+
+Toda métrica publicada neste perfil segue um formato fixo — porque um número
+sozinho é uma alegação, e as quatro coisas abaixo são o que transforma
+alegação em fato conferível:
+
+**N · IC de Wilson (95%) · comando · data · commit**
+
+- **N** é a contagem bruta e real — nunca estimada, e arredondada **para
+  baixo** quando aparece solta como "X+" (regra de manutenção deste arquivo).
+- **IC de Wilson** acompanha toda **proporção pequena** (recall, precisão,
+  taxa de falso-positivo). Um "22/22" ou um "0 falso-positivo em 6" soam
+  perfeitos sozinhos — mas com `N` pequeno, um caso a mais ou a menos no
+  corpus muda o resultado inteiro. O intervalo de Wilson (mais honesto que o
+  normal-aproximado quando `N` é pequeno ou a proporção está perto de 0%/100%)
+  mostra o quanto a proporção ainda pode variar: **22/22 é [85%; 100%]**, não
+  "100% garantido"; **0 falso-positivo em 6 tokens é [0%; 39%]**, não "zero
+  falso-positivo para sempre".
+- **comando** é o comando exato que qualquer pessoa roda para reproduzir o
+  número — nenhum dado nesta seção pede confiança, pede reprodução.
+- **data** e **commit** fixam **o que** foi medido e **quando**: o código das
+  ferramentas medidas muda toda semana, então um número sem os dois é uma
+  alegação que ninguém consegue contestar nem reproduzir — porque não dá para
+  saber contra qual versão ela vale.
+
+A tabela "Suíte AppSec" acima é o exemplo aplicado: cada contagem de teste
+tem nota de rodapé com comando, data e commit; cada proporção pequena (recall,
+falso-positivo) carrega o intervalo de Wilson ao lado. As proporções em si —
+os `13/14`, `22/22`, `17/17`/`20/20` — vêm da bateria de corpus fixado de cada
+ferramenta (`bench/`, datado e versionado), não foram re-executadas nesta
+revisão; o que esta revisão fez foi **parar de esconder a incerteza que já
+estava calculada nos `BENCHMARK.md`/README de cada repositório** ao resumir
+o número aqui no perfil.
+
+E um número **saiu** da tabela: "~38 mil tokens/s" na linha do Chaveiro. Não
+tinha comando, data nem commit — e ao procurar a origem, o `CHANGELOG.md` do
+Chaveiro registra **24.606 tokens/s em 2026-08-05**, não 38 mil, e a seção
+"Prova de campo" do README atual do Chaveiro **nem publica mais** essa
+métrica. Sem lastro nos dois sentidos (número errado E descontinuado pela
+própria ferramenta), a linha certa era remover, não corrigir para um número
+que ninguém mais mede.
 
 <br/>
 

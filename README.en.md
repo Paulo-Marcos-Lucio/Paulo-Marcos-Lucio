@@ -126,11 +126,11 @@ Detection is free. **Fixing is work — and work is what I sell.**
 
 | | Project | What it does | Front | Tests |
 | :---: | --- | --- | :---: | :---: |
-| `01` | **[Sentinela](https://github.com/Paulo-Marcos-Lucio/sentinela)** ("Sentinel") | Non-intrusive web config diagnostic: headers, TLS, cookies, CORS, DNS/email (SPF/DMARC/MTA-STS), deep CSP, subdomain discovery via Certificate Transparency and subdomain takeover, **plus injection surface** (forms, CSRF, parameter reflection/XSS); console/markdown/HTML/JSON reports and **SARIF 2.1.0** with an action plan. The **Pro** edition actively confirms injection. `Python` | Perimeter | `424` |
-| `02` | **[Guardião](https://github.com/Paulo-Marcos-Lucio/guardiao)** ("Guardian") | Leaked-secrets scanner for your code **and Git history**: provider regex + **normalized entropy (Miller-Madow)**, baseline, **SARIF 2.1.0**, pre-commit hook; validates CPF/CNPJ check digits (Brazilian tax IDs, LGPD-relevant). Recall **13/14** on the bench corpus, **0 false positives**. `Python` | Secrets | `186` |
-| `03` | **[Chaveiro](https://github.com/Paulo-Marcos-Lucio/chaveiro)** ("Locksmith") | **JWT/JWS** token auditor: `alg:none`, RS→HS confusion, HMAC secret brute-forcing, `kid`/`jku` SSRF, nested JWT, CPF in claims, claim validation + a correct-validation reference. **22/22** vectors on the corpus, **0 false positives** across 6 legitimate tokens, ~38k tokens/sec. `Python` | Authentication | `191` |
-| `04` | **[Esteira](https://github.com/Paulo-Marcos-Lucio/esteira)** ("Conveyor Belt") | Security auditor for **CI/CD (GitHub Actions)**: script injection, actions not pinned by SHA, `pull_request_target`, permissions, `secrets: inherit`, unpinned images; **SARIF 2.1.0** output. **17/17** rules and **20/20** recall on the corpus, **0 false positives**. `Python` | Supply chain | `249` |
-| `05` | **[Laboratório OWASP](https://github.com/Paulo-Marcos-Lucio/laboratorio-owasp)** ("OWASP Lab") | **8 vulnerabilities across 3 categories of the OWASP Top 10:2025** (A01, A04, and A05), spotlighting **A05 Injection** (SQLi with a parameterized fix, XSS, command injection) — each one paired **vulnerable → exploit → fixed**, with a JUnit test proving both sides. `Java 21` · `Spring Boot` | Remediation | `49` |
+| `01` | **[Sentinela](https://github.com/Paulo-Marcos-Lucio/sentinela)** ("Sentinel") | Non-intrusive web config diagnostic: headers, TLS, cookies, CORS, DNS/email (SPF/DMARC/MTA-STS), deep CSP, subdomain discovery via Certificate Transparency and subdomain takeover, **plus injection surface** (forms, CSRF, parameter reflection/XSS); console/markdown/HTML/JSON reports and **SARIF 2.1.0** with an action plan. The **Pro** edition actively confirms injection. `Python` | Perimeter | `399`¹ |
+| `02` | **[Guardião](https://github.com/Paulo-Marcos-Lucio/guardiao)** ("Guardian") | Leaked-secrets scanner for your code **and Git history**: provider regex + **normalized entropy (Miller-Madow)**, baseline, **SARIF 2.1.0**, pre-commit hook; validates CPF/CNPJ check digits (Brazilian tax IDs, LGPD-relevant). Recall **13/14** (95% Wilson CI 69–99%) on the [`bench/`](https://github.com/Paulo-Marcos-Lucio/guardiao/tree/main/bench) corpus, **0 false positives**. `Python` | Secrets | `250`¹ |
+| `03` | **[Chaveiro](https://github.com/Paulo-Marcos-Lucio/chaveiro)** ("Locksmith") | **JWT/JWS** token auditor: `alg:none`, RS→HS confusion, HMAC secret brute-forcing, `kid`/`jku` SSRF, nested JWT, CPF in claims, claim validation + a correct-validation reference. **22/22** vectors on the corpus (95% Wilson CI 85–100%), **0 false positives** across 6 legitimate tokens. `Python` | Authentication | `218`¹ |
+| `04` | **[Esteira](https://github.com/Paulo-Marcos-Lucio/esteira)** ("Conveyor Belt") | Security auditor for **CI/CD (GitHub Actions)**: script injection, actions not pinned by SHA, `pull_request_target`, permissions, `secrets: inherit`, unpinned images; **SARIF 2.1.0** output. **17/17** rules and **20/20** recall on the corpus (95% Wilson CI 84–100%), **0 false positives**. `Python` | Supply chain | `303`¹ |
+| `05` | **[Laboratório OWASP](https://github.com/Paulo-Marcos-Lucio/laboratorio-owasp)** ("OWASP Lab") | **8 vulnerabilities across 3 categories of the OWASP Top 10:2025** (A01, A04, and A05), spotlighting **A05 Injection** (SQLi with a parameterized fix, XSS, command injection) — each one paired **vulnerable → exploit → fixed**, with a JUnit test proving both sides. `Java 21` · `Spring Boot` | Remediation | `49`¹ |
 | `06` | **[Observatório da Superfície](https://github.com/Paulo-Marcos-Lucio/observatorio-da-superficie)** ("Surface Observatory") | Passive, continuous reading of security headers, TLS, DNS, and Certificate Transparency across a handful of my own and reference targets, **kept as a time series** — a single-day report only says how the target looked that day; drift only shows up by measuring every day and comparing. Runs on its own in GitHub Actions, public. `Python` | Surveillance | `38` |
 
 <div align="center">
@@ -139,7 +139,53 @@ Detection is free. **Fixing is work — and work is what I sell.**
 
 </div>
 
+<sub>¹ "Tests" column measured on **2026-08-31**, `pytest -q` (Sentinela/Guardião/Chaveiro/Esteira) or `./mvnw -B verify` (Lab), on each repository's `main`: Sentinela `42808aa`, Guardião `496db84` (+1 skipped), Chaveiro `909d1ed`, Esteira `f39a387`, Lab `8fbda90`. Format explained in the "How I report numbers" section, right below. Observatório da Superfície has no commit cited here because this profile doesn't have that repository cloned in this revision — number not re-verified.</sub>
+
 <sub>**And where do I lose?** I published the [honest benchmark against gitleaks, trufflehog, and zizmor](https://github.com/Paulo-Marcos-Lucio/guardiao/blob/main/BENCHMARK.md) — pinned versions and commits, reproducible, and it says where the incumbent is leaner than mine. No single scanner wins across the board; what I sell is low-false-positive calibration and the work built on top of the result.</sub>
+
+<br/>
+
+## `~/` How I report numbers
+
+Every metric published on this profile follows a fixed format — because a
+number on its own is a claim, and the four things below are what turns a
+claim into a checkable fact:
+
+**N · 95% Wilson CI · command · date · commit**
+
+- **N** is the raw, real count — never estimated, and rounded **down**
+  whenever it appears loose as "X+" (this file's own maintenance rule).
+- **Wilson CI** accompanies every **small proportion** (recall, precision,
+  false-positive rate). A bare "22/22" or "0 false positives out of 6" sounds
+  perfect on its own — but with a small `N`, one more or one fewer case in
+  the corpus changes the whole result. The Wilson interval (more honest than
+  the normal approximation when `N` is small or the proportion sits near
+  0%/100%) shows how much the proportion can still move: **22/22 is [85%;
+  100%]**, not "100% guaranteed"; **0 false positives out of 6 tokens is
+  [0%; 39%]**, not "zero false positives, forever".
+- **command** is the exact command anyone can run to reproduce the number —
+  nothing in this section asks for trust, it asks for reproduction.
+- **date** and **commit** pin down **what** was measured and **when**: the
+  code behind the tools being measured changes every week, so a number
+  without both is a claim nobody can contest or reproduce — there's no way
+  to know which version it's even true of.
+
+The "AppSec Suite" table above is the applied example: every test count
+carries a footnote with command, date, and commit; every small proportion
+(recall, false positives) carries its Wilson interval alongside it. The
+proportions themselves — the `13/14`, `22/22`, `17/17`/`20/20` — come from
+each tool's own pinned corpus battery (`bench/`, dated and version-controlled),
+and were not re-run in this revision; what this revision did was **stop
+hiding the uncertainty that was already computed in each repository's
+`BENCHMARK.md`/README** when summarizing the number here on the profile.
+
+And one number **left** the table: "~38k tokens/sec" on the Chaveiro row. It
+had no command, date, or commit — and tracing its origin, Chaveiro's own
+`CHANGELOG.md` records **24,606 tokens/s on 2026-08-05**, not 38k, and
+Chaveiro's current "Prova de campo" ("Field proof") README section **no
+longer publishes** that metric at all. Unbacked in both directions (the
+number was wrong, and the tool itself discontinued measuring it), the right
+move was to remove it, not correct it to a number nobody measures anymore.
 
 <br/>
 
