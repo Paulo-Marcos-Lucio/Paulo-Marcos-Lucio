@@ -50,7 +50,7 @@
 
 <div align="center">
 
-**Eu escrevi as implementações de referência do Pix, do Open Finance e do DICT — sistemas onde errar em segurança não é opção. Agora eu procuro o que está exposto na _sua_ aplicação, antes que vire incidente.**
+**Eu construí — e abri — uma suíte de ferramentas de AppSec, calibrada com baixo falso-positivo. Agora eu procuro o que está exposto na _sua_ aplicação, antes que vire incidente.**
 
 <br/>
 
@@ -94,7 +94,7 @@
 
 ## `~/` Sobre
 
-Eu **sou o time de dev** que escreveu segurança em produção. Desenvolvedor **Java/Spring**, autor de **implementações de referência** dos sistemas financeiros regulados brasileiros — Pix Automático, Pix por Aproximação, Open Finance (PISP), DICT, Open Insurance —, com mTLS ICP-Brasil, FAPI, arquitetura hexagonal e teste. São **6 repositórios públicos** aqui do lado; abra qualquer um. Essa é a régua que eu trago para a **sua** aplicação: minhas recomendações de correção cabem no sprint do time — porque eu já estive do lado que teria que aplicá-las.
+Eu **construo as ferramentas** que uso. Desenvolvedor que escreveu uma **suíte de AppSec em Python** (Sentinela, Guardião, Esteira, Chaveiro) e um **laboratório OWASP em Java/Spring** — código público, testado, com CI verde e baixo falso-positivo adjudicado em campo. São **repositórios públicos** aqui do lado; abra qualquer um. Essa é a régua que eu trago para a **sua** aplicação: minhas recomendações de correção cabem no sprint do time — porque quem diagnostica é quem conserta.
 
 Hoje atuo com **segurança de aplicações web (AppSec)**: **diagnóstico e correção de vulnerabilidades**, hardening e prevenção em sistemas expostos na internet — cabeçalhos de segurança, TLS/PKI, cookies, CORS, exposição de arquivos, DNS/e-mail e superfície de injeção — tudo mapeado ao **OWASP Top 10** e à **LGPD (art. 46)**.
 
@@ -196,7 +196,7 @@ Detectar é de graça. **Corrigir é trabalho — e trabalho é o que eu vendo.*
 
 ## `~/` Stack
 
-<img src="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/stack-bom.svg" alt="Lista de materiais da stack: segurança de aplicações web, engenharia e automação, e background em fintech regulada — Spring, mTLS ICP-Brasil, FAPI, Pix, Open Finance, OAuth2/OIDC" width="100%"/>
+<img src="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/stack-bom.svg" alt="Lista de materiais da stack: segurança de aplicações web, engenharia e automação — Python, Java/Spring, OWASP, LGPD, OAuth2/OIDC/JWT, Linux" width="100%"/>
 
 <br/>
 

@@ -27,7 +27,7 @@
 
 <div align="center">
 
-**I wrote the reference implementations of Pix, Open Finance, and DICT — systems where a security mistake isn't an option. Now I look for what's exposed in _your_ application, before it becomes an incident.**
+**I built — and opened — a suite of AppSec tools, calibrated for low false positives. Now I look for what's exposed in _your_ application, before it becomes an incident.**
 
 <br/>
 
@@ -71,7 +71,7 @@
 
 ## `~/` About
 
-I **am the dev team** that wrote security into production. **Java/Spring** developer, author of **reference implementations** for Brazil's regulated financial systems — Pix Automático, Pix por Aproximação (proximity payments), Open Finance (PISP), DICT, Open Insurance — with mTLS on Brazil's ICP-Brasil PKI, FAPI, hexagonal architecture, and test coverage. There are **6 public repositories** right here on the side; open any of them. That's the bar I bring to **your** application: my fix recommendations fit inside your team's sprint — because I've been on the side that would have had to apply them.
+I **build the tools** I use. A developer who wrote an **AppSec suite in Python** (Sentinela, Guardião, Esteira, Chaveiro) and an **OWASP lab in Java/Spring** — public, tested code with green CI and low false positives adjudicated in the field. There are **public repositories** right here on the side; open any of them. That's the bar I bring to **your** application: my fix recommendations fit inside your team's sprint — because the person who diagnoses is the one who fixes.
 
 Today I work in **web application security (AppSec)**: **diagnosing and fixing vulnerabilities**, hardening, and prevention for internet-facing systems — security headers, TLS/PKI, cookies, CORS, file exposure, DNS/email, and injection surface — all mapped to the **OWASP Top 10** and to **LGPD (Brazil's data-protection law, GDPR-equivalent), art. 46**.
 
@@ -173,7 +173,7 @@ Detection is free. **Fixing is work — and work is what I sell.**
 
 ## `~/` Stack
 
-<img src="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/stack-bom.svg" alt="Stack bill of materials: web application security, engineering and automation, and background in regulated fintech — Spring, mTLS on ICP-Brasil, FAPI, Pix, Open Finance, OAuth2/OIDC" width="100%"/>
+<img src="https://raw.githubusercontent.com/Paulo-Marcos-Lucio/Paulo-Marcos-Lucio/main/assets/stack-bom.svg" alt="Stack bill of materials: web application security, engineering and automation — Python, Java/Spring, OWASP, LGPD, OAuth2/OIDC/JWT, Linux" width="100%"/>
 
 <br/>
 
